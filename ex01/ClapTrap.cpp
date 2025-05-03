@@ -3,16 +3,16 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
-	std::clog << "default constructor called" << std::endl;
+	std::clog << "default ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) {
-	std::clog << "string-parameter constructor called" << std::endl;
+	std::clog << "string-parameter ClapTrap constructor called" << std::endl;
 	this->name = name;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other) {
-	std::clog << "copy constructor called" << std::endl;
+	std::clog << "copy ClapTrap constructor called" << std::endl;
 	this->name = other.name;
 	this->hitPoints = other.hitPoints;
 	this->energyPoints = other.energyPoints;
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(const ClapTrap& other) {
 }
 
 ClapTrap&	ClapTrap::operator =(const ClapTrap& other) {
-	std::clog << "copy assignment operator called" << std::endl;
+	std::clog << "copy ClapTrap assignment operator called" << std::endl;
 	if (this == &other) return *this;
 	this->name = other.name;
 	this->hitPoints = other.hitPoints;
@@ -30,7 +30,7 @@ ClapTrap&	ClapTrap::operator =(const ClapTrap& other) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::clog << "default destructor called" << std::endl;
+	std::clog << "default ClapTrap destructor called" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target) {
