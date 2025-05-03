@@ -68,5 +68,6 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 	} else {
 		std::cout << name_string << " pulls itself back together, healing " << amount << " hitpoints" << std::endl;
 		this->hitPoints += amount;
+		this->energyPoints--;
 	}
 }
